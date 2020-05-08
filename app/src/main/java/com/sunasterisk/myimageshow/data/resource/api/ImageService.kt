@@ -6,10 +6,9 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-
 interface ImageService {
     @GET("search/photos?")
-    open fun getSearchByKeyWord(
+    fun getSearchByKeyWord(
         @Query("query") keyWord: String,
         @Query("per_page") perPage : Int
     ): Observable<PageResult>

@@ -4,10 +4,10 @@ import com.sunasterisk.myimageshow.data.model.PageResult
 import io.reactivex.rxjava3.core.Observable
 
 interface ImageDataSource {
-    interface local {
+    interface Local {
     }
 
-    interface remote {
-        fun getImageByKeyWord(keyWord: String, parPage: Int): Observable<PageResult>
+    interface Remote {
+        fun getImageByKeyWord(keyWord: String, parPage: Int): Observable<PageResult>?
     }
 }

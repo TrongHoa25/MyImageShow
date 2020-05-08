@@ -11,8 +11,8 @@ interface ImageRepository {
 }
 
 class ImageRepositoryImpl(
-    val local: ImageLocalDataSource,
-    val remote: ImageRemoteDataSource
+    private val local: ImageLocalDataSource,
+    private val remote: ImageRemoteDataSource
 ) : ImageRepository {
 
     override fun getSearchImageByKeyWord(keyWord: String, perPage: Int): Observable<PageResult> =
