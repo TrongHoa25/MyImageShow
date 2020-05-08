@@ -2,7 +2,7 @@ package com.sunasterisk.myimageshow.data.resource.local
 
 import com.sunasterisk.myimageshow.data.resource.ImageDataSource
 
-class ImageLocalDataSource : ImageDataSource.local {
+class ImageLocalDataSource : ImageDataSource.Local {
 
     private object HOLDER {
         val INSTANCE = ImageLocalDataSource()

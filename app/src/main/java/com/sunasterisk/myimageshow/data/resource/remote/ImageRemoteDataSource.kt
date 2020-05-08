@@ -6,12 +6,12 @@ import com.sunasterisk.myimageshow.data.resource.api.ImageService
 import com.sunasterisk.myimageshow.data.resource.remote.conection.RetrofitClient
 import io.reactivex.rxjava3.core.Observable
 
-class ImageRemoteDataSource(retrofitClient: RetrofitClient) : ImageDataSource.remote {
+class ImageRemoteDataSource(retrofitClient: RetrofitClient) : ImageDataSource.Remote {
 
-    val requestService = retrofitClient.getImageService()
+    private val requestService = retrofitClient.getImageService()
 
-    override fun getImageByKeyWord(keyWord: String, perPage: Int): Observable<PageResult> =
-        requestService!!.getSearchByKeyWord(keyWord, perPage)
+    override fun getImageByKeyWord(keyWord: String, perPage: Int): Observable<PageResult>? =
+        requestService?.getSearchByKeyWord(keyWord, perPage)
 
     companion object {
         var instance: ImageRemoteDataSource? = null

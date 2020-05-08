@@ -16,10 +16,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        imageRepositoryImpl = ImageRepositoryImpl(ImageLocalDataSource.instance, ImageRemoteDataSource.getInstance(
-            RetrofitClient(this)
-        ))
-        mainViewModel = MainViewModel(imageRepositoryImpl,this)
+        initView()
+        initData()
+
+
+    }
+
+    private fun initView() {}
+
+    private fun initData() {
+        imageRepositoryImpl =
+            ImageRepositoryImpl(ImageLocalDataSource.instance, ImageRemoteDataSource.getInstance(
+                RetrofitClient.instance
+            ))
+        mainViewModel = MainViewModel(this, imageRepositoryImpl)
         mainViewModel.loadPage("Sexy girl", 20)
     }
 }
