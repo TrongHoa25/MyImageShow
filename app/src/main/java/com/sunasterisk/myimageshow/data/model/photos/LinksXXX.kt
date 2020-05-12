@@ -1,9 +1,9 @@
-package com.sunasterisk.myimageshow.data.model
+package com.sunasterisk.myimageshow.data.model.photos
 
 
 import com.google.gson.annotations.SerializedName
 
-data class LinksXX(
+data class LinksXXX(
     @SerializedName("followers")
     val followers: String,
     @SerializedName("following")

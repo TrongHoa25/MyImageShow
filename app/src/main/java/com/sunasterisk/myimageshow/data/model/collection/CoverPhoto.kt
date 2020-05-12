@@ -1,4 +1,4 @@
-package com.sunasterisk.myimageshow.data.model
+package com.sunasterisk.myimageshow.data.model.collection
 
 
 import com.google.gson.annotations.SerializedName
@@ -25,9 +25,11 @@ data class CoverPhoto(
     @SerializedName("likes")
     val likes: Int,
     @SerializedName("links")
-    val links: LinksX,
+    val links: Links,
     @SerializedName("promoted_at")
-    val promotedAt: String,
+    val promotedAt: Any,
+    @SerializedName("sponsorship")
+    val sponsorship: Any,
     @SerializedName("updated_at")
     val updatedAt: String,
     @SerializedName("urls")

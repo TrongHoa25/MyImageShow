@@ -1,8 +1,9 @@
 package com.sunasterisk.myimageshow.data.resource.remote
 
-import com.sunasterisk.myimageshow.data.model.PageResult
+import com.sunasterisk.myimageshow.data.model.collection.Collection
+import com.sunasterisk.myimageshow.data.model.photos.PageResult
+import com.sunasterisk.myimageshow.data.model.photos.Result
 import com.sunasterisk.myimageshow.data.resource.ImageDataSource
-import com.sunasterisk.myimageshow.data.resource.api.ImageService
 import com.sunasterisk.myimageshow.data.resource.remote.conection.RetrofitClient
 import io.reactivex.rxjava3.core.Observable
 
@@ -12,6 +13,12 @@ class ImageRemoteDataSource(retrofitClient: RetrofitClient) : ImageDataSource.Re
 
     override fun getImageByKeyWord(keyWord: String, perPage: Int): Observable<PageResult>? =
         requestService?.getSearchByKeyWord(keyWord, perPage)
+
+    override fun getCollectionPhotosById(id: String): Observable<List<Result>>? =
+        requestService?.getColectionPhotosById(id)
+
+    override fun getCollectionListByPage(page: Int): Observable<Collection>? =
+        requestService?.getCollectionListByPage(page)
 
     companion object {
         var instance: ImageRemoteDataSource? = null

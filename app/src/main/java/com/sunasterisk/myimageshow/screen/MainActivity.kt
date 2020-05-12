@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         initView()
         initData()
 
-
     }
 
     private fun initView() {}
@@ -30,6 +29,8 @@ class MainActivity : AppCompatActivity() {
                 RetrofitClient.instance
             ))
         mainViewModel = MainViewModel(this, imageRepositoryImpl)
-        mainViewModel.loadPage("Sexy girl", 20)
+        mainViewModel.loadSearchPage("Sexy girl", 20)
+        mainViewModel.loadCollectionPhotos("9454911")
+        mainViewModel.loadCollectionListByPage(1)
     }
 }

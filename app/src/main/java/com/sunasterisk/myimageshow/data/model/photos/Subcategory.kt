@@ -1,9 +1,9 @@
-package com.sunasterisk.myimageshow.data.model
+package com.sunasterisk.myimageshow.data.model.photos
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Category(
+data class Subcategory(
     @SerializedName("pretty_slug")
     val prettySlug: String,
     @SerializedName("slug")

@@ -1,9 +1,9 @@
-package com.sunasterisk.myimageshow.data.model
+package com.sunasterisk.myimageshow.data.model.collection
 
 
 import com.google.gson.annotations.SerializedName
 
-data class UrlsX(
+data class Urls(
     @SerializedName("full")
     val full: String,
     @SerializedName("raw")
