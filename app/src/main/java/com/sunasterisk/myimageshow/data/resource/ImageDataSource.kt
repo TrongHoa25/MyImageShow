@@ -6,8 +6,7 @@ import com.sunasterisk.myimageshow.data.model.photos.Result
 import io.reactivex.rxjava3.core.Observable
 
 interface ImageDataSource {
-    interface Local {
-    }
+    interface Local {}
 
     interface Remote {
         fun getImageByKeyWord(keyWord: String, parPage: Int): Observable<PageResult>?

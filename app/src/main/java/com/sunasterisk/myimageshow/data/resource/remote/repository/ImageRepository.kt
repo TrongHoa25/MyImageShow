@@ -26,4 +26,13 @@ class ImageRepositoryImpl(
 
     override fun getCollectionListByPage(page: Int): Observable<Collection>? =
         remote.getCollectionListByPage(page)
+
+    companion object {
+        private var INSTANCE: ImageRepositoryImpl? = null
+        fun getInstance(
+            local: ImageLocalDataSource,
+            remote: ImageRemoteDataSource) = INSTANCE ?: synchronized(this) {
+            INSTANCE ?: ImageRepositoryImpl(local, remote).also { INSTANCE = it }
+        }
+    }
 }
