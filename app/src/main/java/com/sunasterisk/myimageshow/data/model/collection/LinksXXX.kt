@@ -1,9 +1,9 @@
-package com.sunasterisk.myimageshow.data.model
+package com.sunasterisk.myimageshow.data.model.collection
 
 
 import com.google.gson.annotations.SerializedName
 
-data class LinksX(
+data class LinksXXX(
     @SerializedName("download")
     val download: String,
     @SerializedName("download_location")

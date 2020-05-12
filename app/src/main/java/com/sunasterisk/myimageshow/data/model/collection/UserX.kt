@@ -1,4 +1,4 @@
-package com.sunasterisk.myimageshow.data.model
+package com.sunasterisk.myimageshow.data.model.collection
 
 
 import com.google.gson.annotations.SerializedName
@@ -7,7 +7,7 @@ data class UserX(
     @SerializedName("accepted_tos")
     val acceptedTos: Boolean,
     @SerializedName("bio")
-    val bio: String,
+    val bio: Any,
     @SerializedName("first_name")
     val firstName: String,
     @SerializedName("id")
@@ -17,13 +17,13 @@ data class UserX(
     @SerializedName("last_name")
     val lastName: String,
     @SerializedName("links")
-    val links: LinksXXX,
+    val links: LinksXXXX,
     @SerializedName("location")
     val location: Any,
     @SerializedName("name")
     val name: String,
     @SerializedName("portfolio_url")
-    val portfolioUrl: String,
+    val portfolioUrl: Any,
     @SerializedName("profile_image")
     val profileImage: ProfileImageX,
     @SerializedName("total_collections")
@@ -33,7 +33,7 @@ data class UserX(
     @SerializedName("total_photos")
     val totalPhotos: Int,
     @SerializedName("twitter_username")
-    val twitterUsername: Any,
+    val twitterUsername: String,
     @SerializedName("updated_at")
     val updatedAt: String,
     @SerializedName("username")

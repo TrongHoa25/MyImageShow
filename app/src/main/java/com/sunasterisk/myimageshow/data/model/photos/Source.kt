@@ -1,7 +1,9 @@
-package com.sunasterisk.myimageshow.data.model
+package com.sunasterisk.myimageshow.data.model.photos
 
 
 import com.google.gson.annotations.SerializedName
+import com.sunasterisk.myimageshow.data.model.photos.Ancestry
+import com.sunasterisk.myimageshow.data.model.photos.CoverPhoto
 
 data class Source(
     @SerializedName("ancestry")
