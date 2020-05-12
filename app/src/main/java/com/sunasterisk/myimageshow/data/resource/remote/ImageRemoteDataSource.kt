@@ -21,15 +21,11 @@ class ImageRemoteDataSource(retrofitClient: RetrofitClient) : ImageDataSource.Re
         requestService?.getCollectionListByPage(page)
 
     companion object {
-        var instance: ImageRemoteDataSource? = null
+        private var INSTANCE: ImageRemoteDataSource? = null
+
         @JvmStatic
-        fun getInstance(retrofitClient: RetrofitClient): ImageRemoteDataSource {
-            if (instance == null) {
-                synchronized(ImageRemoteDataSource::javaClass) {
-                    instance = ImageRemoteDataSource(retrofitClient)
-                }
-            }
-            return instance!!
+        fun getInstance(retrofitClient: RetrofitClient) = INSTANCE ?: synchronized(this) {
+            INSTANCE ?: ImageRemoteDataSource(retrofitClient).also { INSTANCE = it }
         }
     }
 }

@@ -18,16 +18,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initView()
         initData()
-
     }
 
     private fun initView() {}
 
     private fun initData() {
-        imageRepositoryImpl =
-            ImageRepositoryImpl(ImageLocalDataSource.instance, ImageRemoteDataSource.getInstance(
-                RetrofitClient.instance
-            ))
+        imageRepositoryImpl = ImageRepositoryImpl.getInstance(
+            ImageLocalDataSource.instance,
+            ImageRemoteDataSource.getInstance(RetrofitClient())
+        )
         mainViewModel = MainViewModel(this, imageRepositoryImpl)
         mainViewModel.loadSearchPage("Sexy girl", 20)
         mainViewModel.loadCollectionPhotos("9454911")
