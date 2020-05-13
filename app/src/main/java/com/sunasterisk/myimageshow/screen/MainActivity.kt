@@ -1,5 +1,7 @@
 package com.sunasterisk.myimageshow.screen
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.sunasterisk.myimageshow.R
@@ -31,5 +33,12 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.loadSearchPage("Sexy girl", 20)
         mainViewModel.loadCollectionPhotos("9454911")
         mainViewModel.loadCollectionListByPage(1)
+    }
+
+    companion object {
+        fun getChangeActivityIntent(context: Context): Intent {
+            val intent = Intent(context,MainActivity::class.java)
+            return intent
+        }
     }
 }
