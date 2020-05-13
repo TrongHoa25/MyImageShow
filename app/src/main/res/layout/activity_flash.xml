@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screen.FlashActivity">
+
+    <ImageView
+        android:id="@+id/imageFlashScreen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amaranth_bold_italic"
+        android:text="@string/webName"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/imageFlashScreen"
+        app:layout_constraintEnd_toEndOf="@id/imageFlashScreen"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="@id/imageFlashScreen"
+        app:layout_constraintTop_toTopOf="@id/imageFlashScreen"
+        app:layout_constraintVertical_bias="0.962" />
+
+    <TextView
+        android:id="@+id/textFlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amaranth_bold_italic"
+        android:text="@string/custom_app_name"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/imageFlashScreen"
+        app:layout_constraintEnd_toEndOf="@id/imageFlashScreen"
+        app:layout_constraintStart_toStartOf="@id/imageFlashScreen"
+        app:layout_constraintTop_toTopOf="@id/imageFlashScreen"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <Button
+        android:textSize="20sp"
+        android:padding="20dp"
+        android:id="@+id/buttonShowImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/amaranth_bold_italic"
+        android:text="@string/viewPhoto"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/imageFlashScreen"
+        app:layout_constraintEnd_toEndOf="@id/imageFlashScreen"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@id/imageFlashScreen"
+        app:layout_constraintTop_toTopOf="@id/imageFlashScreen"
+        app:layout_constraintVertical_bias="0.625" />
+</androidx.constraintlayout.widget.ConstraintLayout>

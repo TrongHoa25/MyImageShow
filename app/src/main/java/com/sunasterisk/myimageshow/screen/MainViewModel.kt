@@ -46,7 +46,7 @@ class MainViewModel(private val context: Context, private val repository: ImageR
             ?.observeOn(AndroidSchedulers.mainThread())
             ?.subscribe(
                 {result ->
-                    Log.d(TAG, result.toString().toString())
+                    Log.d(TAG, result.toString())
                     Log.d(TAG, result.size.toString())
                 },
                 {error -> Toast.makeText(context, error.message, Toast.LENGTH_LONG).show()}
